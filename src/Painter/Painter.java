@@ -35,6 +35,9 @@ import javax.swing.event.ChangeListener;
 
 public class Painter extends JFrame implements ActionListener{
 
+	
+	private static final long serialVersionUID = 1L;
+	
 	private boolean hasDraw=false;
 	private	Container c = getContentPane();
 	private	String menuBar[]={"文件(F)","编辑(E)","视图(V)","说明(H)"};
@@ -675,8 +678,8 @@ public class Painter extends JFrame implements ActionListener{
 			jMenuItem[1][2].setEnabled(true);
 			jMenuItem[1][3].setEnabled(true);
 		}
-		else if(drawMethod==11)
-		{
+		else if(drawMethod==11)//油漆桶
+		{	
 			
 			Graphics2D g2d_bufImg = (Graphics2D) bufImg.getGraphics();
 			if(color_border!=null)
